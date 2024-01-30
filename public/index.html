@@ -64,6 +64,7 @@
       <form method="POST" action="/tweets"> 
         <label for="tweet-text"><strong>What are you humming about?</strong></label>
         <textarea  class="test"name="text" id="tweet-text"></textarea>
+        <div class="line"></div>
         <div class="button-counter-container">
           <button type="submit" font=>Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
@@ -71,16 +72,33 @@
       </form>
     </section>
   
-    <section class="new-tweet">
-      
-      <form method="POST" action="/tweets"> 
-        <label for="tweet-text"><strong>What are you humming about?</strong></label>
-        <textarea  class="test"name="text" id="tweet-text"></textarea>
-        <div class="button-counter-container">
-          <button type="submit" font=>Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+    <article class="tweet">
+      <heade>
+        
+        <div class="user-info">
+          <img src="/images/profile-hex.png" alt="Profile Image">
+          <h3>John Doe</h3>
+          <p>@johndoe</p>
+          
         </div>
-      </form>
-    </section></main>
+      </heade>
+      <div class="line"></div>
+      <div class="tweet-content">
+        <p>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, consectetur adipiscing elit.</p>
+      </div>
+       <!-- Horizontal line -->
+       <div class="line"></div>
+      <footer>
+        
+        <p>Placeholder date</p>
+        <div class="icons">
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+          
+        </div>
+      </footer>
+    </article>
+    </main>
   </body>
 </html>
