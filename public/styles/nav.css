@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  background-color: #4056A1; 
+  height: 120px;
+  width: 100%;
+  align-items:center;
+  position: fixed;
+  top: 0
+}
+
+nav span {
+  display: flex;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF; 
+  font-size: 50px; 
+  line-height: 150px;
+  justify-content: flex-start;
+  padding: 0 1.5em;
+  
+}
+
+
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  font-family: 'Source Sans 3', sans-serif; 
+  color: #FFFFFF; 
+  font-size: 30px; 
+  align-items: center;
+  
+  padding: 0 1.5em;
+}
+
