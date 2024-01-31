@@ -1,4 +1,4 @@
-header {
+body > header {
   background-color: #9fa140; 
   height: 520px;
   width: 100%;
@@ -11,11 +11,11 @@ header {
   margin-top: 120px;
 }
 
-header img {
+body > header img {
   display: flex;
 }
 
-header h2 {
+body > header h2 {
   display: flex;
   margin-top: 5px;
   justify-content: center;

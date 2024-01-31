@@ -49,6 +49,19 @@ textarea {
   border-radius: 4px;
   cursor: pointer;
   font-family: 'Bungee', sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.button-counter-container button i {
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+.button-counter-container button i:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
+  
+  transform: rotate(360deg) scale(2);
+
 }
 
 .button-counter-container .counter {
@@ -58,77 +71,3 @@ textarea {
 }
 
 
-.tweet .heade {
-display: flex;
-  align-items: center;
-  flex-direction: row
-
-}
-
-/* Style for the tweet component */
-article.tweet {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  background-color: #fff;
-}
-
-/* Header styles */
-article.tweet heade {
-  
-}
-
-
-
-article.tweet .user-info {
-  display: flex;
-  flex-direction: row;
-  
-}
-
-article.tweet .user-info img {
-  border-radius: 50%;
-  margin-right: 8px;
-  
-}
-
-article.tweet heade .user-info h3 {
-  margin-right: auto;
-  
-}
-
-article.tweet heade p {
-  margin: 0;
-  color: #9c9c9c;
-  margin-left: auto;
-  
-}
-
-/* Horizontal line styles */
-article.tweet .line {
-  border-top: 1px solid #ccc;
-  margin: 16px 0; /* Adjust the margin as needed */
-}
-
-/* Tweet content styles */
-article.tweet .tweet-content {
-  margin: 16px 0;
-}
-
-/* Footer styles */
-article.tweet footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Source Sans 3', sans-serif; 
-  
-}
-
-article.tweet footer .icons i {
-  margin-left: 8px;
-  transition: box-shadow 0.3s ease; /* Adding a smooth transition effect */
-}
-
-article.tweet footer .icons i:hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Add your desired box shadow properties */
-}
