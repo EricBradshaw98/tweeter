@@ -6,7 +6,7 @@
   }
   
   
-  article.tweet {
+  section.tweets-container {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
@@ -20,7 +20,7 @@
   */
   
   
-  article.tweet .user-info {
+  section.tweets-container .user-info {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,18 +28,18 @@
     padding: 30px;
   }
   
-  article.tweet .user-info img {
+  section.tweets-container .user-info img {
     border-radius: 50%;
     margin-right: 8px;
     border: 10px solid #050505;
   }
   
-  article.tweet .user-info h3 {
+  section.tweets-container .user-info h3 {
     margin: 0;
     align-self: flex-start;
   }
   
-  article.tweet .user-info p {
+  section.tweets-container .user-info p {
     margin: 0;
     color: #9c9c9c;
     margin-left: auto;
@@ -48,18 +48,18 @@
   }
   
   /* Horizontal line styles */
-  article.tweet .line {
+  section.tweets-container .line {
     border-top: 1px solid #ccc;
     margin: 16px 0; 
   }
   
   /* Tweet content styles */
-  article.tweet .tweet-content {
+  section.tweets-container .tweet-content {
     margin: 16px 0;
   }
   
   /* Footer styles */
-  article.tweet footer {
+  section.tweets-container footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,12 +67,12 @@
     
   }
   
-  article.tweet footer .icons i {
+  section.tweets-container footer .icons i {
     margin-left: 8px;
     transition: all 0.3s ease;
   }
   
-  article.tweet footer .icons i:hover {
+  section.tweets-container footer .icons i:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
     
     transform: rotate(360deg) scale(2);
