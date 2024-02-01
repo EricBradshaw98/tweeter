@@ -6,7 +6,7 @@
 .new-tweet {
  
   background-color: #ecebd4;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 5px;
   padding: 20px;
   width: 100%
@@ -52,17 +52,13 @@ textarea {
   transition: box-shadow 0.3s ease;
 }
 
-.button-counter-container button i {
-  margin-left: 8px;
-  transition: all 0.3s ease;
-}
-
-.button-counter-container button i:hover {
+.button-counter-container button:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
   
-  transform: rotate(360deg) scale(2);
-
+  transform: rotate(360deg) scale(1.2);
 }
+
+
 
 .button-counter-container .counter {
   color: #777;
@@ -71,3 +67,36 @@ textarea {
 }
 
 
+
+
+#error-container {
+  display: none;
+  background-color: #ffe6e6;
+  color: #cc0000;
+  padding: 10px;
+  border: 1px solid #cc0000;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive styles for screens smaller than 768px */
+@media only screen and (max-width: 767px) {
+  .button-counter-container button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+
+  .button-counter-container button i {
+    margin-left: 4px; /* Adjust margin for smaller screens */
+  }
+
+  .new-tweet {
+ 
+    background-color: #ecebd4;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%
+  }
+}

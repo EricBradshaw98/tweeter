@@ -9,16 +9,18 @@ $(document).ready(function() {
     const tweetContent = $('#new-tweet-button textarea').val();
 
     // Check if tweet content is empty
-    if (!tweetContent.trim()) {
-      alert('Tweet content cannot be empty!');
-      return;
-    }
+    // Validate tweet content
+  if (!tweetContent.trim()) {
+    showError('🛑 ⚠️ Tweet content cannot be empty! ⚠️ 🛑');
+    return;
+  }
 
-    // Check if tweet content exceeds the character limit
-    if (tweetContent.length > maxCharCount) {
-      alert('Tweet content should not exceed 140 characters!');
-      return;
-    }
+  // Check if tweet content exceeds the character limit
+  if (tweetContent.length > maxCharCount) {
+    showError('🛑 ⚠️ Tweet content should not exceed 140 characters! ⚠️ 🛑');
+    return;
+  }
+  hideError();
 
   const formData = $(this).serialize();
   
@@ -34,11 +36,24 @@ $(document).ready(function() {
       },
       error: function(error) {
         console.error("Error:", error);
-        
+        showError("An error occurred. Please try again.");
       }
       
     });
   });
+
+  // Function to show error messages
+function showError(message) {
+  const $errorContainer = $('#error-container');
+  $errorContainer.text(message);
+  $errorContainer.show();
+}
+
+// Function to hide error messages
+function hideError() {
+  const $errorContainer = $('#error-container');
+  $errorContainer.hide();
+}
 
   function loadTweets() {
     
@@ -59,6 +74,7 @@ $(document).ready(function() {
       }
     });
   }
+  
 
   
   loadTweets();
@@ -86,7 +102,7 @@ function createTweetElement(tweet) {
 </div>
 <div class="line"></div>
 <footer>
-  <span class="timestamp">${timeago.format(tweet.created_at)}</span>
+  <span class="timestamp"> ${timeago.format(tweet.created_at)}</span>
   <div class="icons">
     <i class="fas fa-flag"></i>
     <i class="fas fa-retweet"></i>
@@ -112,7 +128,7 @@ function escapeHtml(str) {
 function renderTweets(tweets) {
   
   const $tweetsContainer = $("#tweets-container");
-  
+  $tweetsContainer.empty();
   
 // loops through tweets
   for (const tweet of tweets) {
@@ -121,7 +137,7 @@ console.log(tweet)
     const $tweetElement = createTweetElement(tweet);
 console.log($tweetElement)
     // takes return value and appends it to the tweets container
-    $tweetsContainer.append($tweetElement);
+    $tweetsContainer.prepend($tweetElement);
   }
 }
 

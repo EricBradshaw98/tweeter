@@ -9,7 +9,7 @@ $(document).ready(function () {
 
       // Check if remaining characters are negative
       if (remainingChars < 0) {
-        $('.counter').css('color', 'red');
+        $('.counter').css('color', 'red', 'font-size', '18px');
     } else {
         // Reset the color if not negative
         $('.counter').css('color', ''); // Empty string resets to default

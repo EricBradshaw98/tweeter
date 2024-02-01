@@ -1,9 +1,16 @@
-.tweet .heade {
-  display: flex;
-    align-items: center;
-    flex-direction: row
+.tweet {
   
+  transition: all 0.3s ease;
+  margin: 10px;
+    
   }
+
+  .tweet:hover {
+  
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.015);
+      
+    }
   
   
   section.tweets-container {
@@ -79,3 +86,10 @@
 
   }
   
+  /* Responsive styles for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  section.tweets-container .user-info {
+    gap: 10px; /* Further adjust gap for smaller screens */
+    font-size: 12px;
+  }
+}
