@@ -7,12 +7,14 @@ $(document).ready(function () {
       const remainingChars = 140 - $(this).val().length;
       $('.counter').text(remainingChars);
 
-      // Check if remaining characters are negative
+      // if remaining characters are negative
       if (remainingChars < 0) {
-        $('.counter').css('color', 'red', 'font-size', '18px');
+        $('.counter').css('color', 'red');
     } else {
-        // Reset the color if not negative
-        $('.counter').css('color', ''); // Empty string resets to default
+        // reset the color 
+        $('.counter').css('color', ''); 
     }
   });
+
+
 });

@@ -5,32 +5,30 @@ $(document).ready(function() {
   $('#new-tweet-button').on('submit', function(event) {
     event.preventDefault();
 
-    // Get the tweet content
+    //  tweet content
     const tweetContent = $('#new-tweet-button textarea').val();
 
-    // Check if tweet content is empty
-    // Validate tweet content
-  if (!tweetContent.trim()) {
-    showError('🛑 ⚠️ Tweet content cannot be empty! ⚠️ 🛑');
-    return;
-  }
+    // tweet content is empty
+    
+    if (!tweetContent.trim()) {
+      showError('🛑 ⚠️ Tweet content cannot be empty! ⚠️ 🛑');
+      return;
+    }
 
-  // Check if tweet content exceeds the character limit
-  if (tweetContent.length > maxCharCount) {
-    showError('🛑 ⚠️ Tweet content should not exceed 140 characters! ⚠️ 🛑');
-    return;
-  }
-  hideError();
-
-  const formData = $(this).serialize();
+    //  exceeds the character limit
+    if (tweetContent.length > maxCharCount) {
+      showError('🛑 ⚠️ Tweet content should not exceed 140 characters! ⚠️ 🛑');
+      return;
+    }
+    hideError();
+    //post to send tweet and load tweeets
+    const formData = $(this).serialize();
   
     $.ajax({
-      url: "http://localhost:8080/tweets", 
+      url: "http://localhost:8080/tweets",
       method: "POST",
       data: formData,
       success: function(response) {
-        console.log("Server response:", response);
-        console.log(formData);
         loadTweets();
         $('#new-tweet-button textarea').val("");
       },
@@ -42,28 +40,29 @@ $(document).ready(function() {
     });
   });
 
-  // Function to show error messages
-function showError(message) {
-  const $errorContainer = $('#error-container');
-  $errorContainer.text(message);
-  $errorContainer.show();
-}
+  // function to show error messages
+  function showError(message) {
+    const $errorContainer = $('#error-container');
+    $errorContainer.text(message);
+    $errorContainer.show();
+  }
 
-// Function to hide error messages
-function hideError() {
-  const $errorContainer = $('#error-container');
-  $errorContainer.hide();
-}
+  // function to hide error messages
+  function hideError() {
+    const $errorContainer = $('#error-container');
+    $errorContainer.hide();
+  }
 
+  //get request to load tweets
   function loadTweets() {
     
     $.ajax({
       url: "http://localhost:8080/tweets",
       method: "GET",
-      dataType: "json", 
+      dataType: "json",
       success: function(tweets) {
         
-        console.log("Fetched tweets:", tweets);
+        
 
         
         renderTweets(tweets);
@@ -76,15 +75,12 @@ function hideError() {
   }
   
 
-  
   loadTweets();
 
+});
 
 
-});   
-
-
-
+//create tweet element to prepend with info ====================================
 
 function createTweetElement(tweet) {
  
@@ -110,37 +106,33 @@ function createTweetElement(tweet) {
   </div>
 </footer>
 <div class="line" style="background-color: black; height: 3px; margin: 10px 0;"></div></article>`).addClass("tweet");
-  
+  // ============================================================================
   // Function to escape HTML entities
-function escapeHtml(str) {
-  const div = document.createElement('div');
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-}
-
-  
-  
-  console.log($tweet, "annnnghghdjhgjd")
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
   return $tweet;
 }
 
-
+// render tweet function================================================
 function renderTweets(tweets) {
   
   const $tweetsContainer = $("#tweets-container");
   $tweetsContainer.empty();
   
-// loops through tweets
+  // loops through tweets
   for (const tweet of tweets) {
-console.log(tweet)
-      // calls createTweetElement for each tweet
+    console.log(tweet);
+    // calls createTweetElement for each tweet
     const $tweetElement = createTweetElement(tweet);
-console.log($tweetElement)
+    console.log($tweetElement);
     // takes return value and appends it to the tweets container
     $tweetsContainer.prepend($tweetElement);
   }
 }
-
+//=====================================================================
 
 
 

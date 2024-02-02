@@ -20,11 +20,7 @@
     background-color: #fff;
   }
   
-  /* Header styles not in use  
-  article.tweet  {
-    
-  }
-  */
+ 
   
   
   section.tweets-container .user-info {
@@ -54,18 +50,18 @@
     
   }
   
-  /* Horizontal line styles */
+ 
   section.tweets-container .line {
     border-top: 1px solid #ccc;
     margin: 16px 0; 
   }
   
-  /* Tweet content styles */
+  
   section.tweets-container .tweet-content {
     margin: 16px 0;
   }
   
-  /* Footer styles */
+ 
   section.tweets-container footer {
     display: flex;
     justify-content: space-between;
@@ -86,10 +82,9 @@
 
   }
   
-  /* Responsive styles for screens smaller than 768px */
+  /*  smaller than 768px */
 @media only screen and (max-width: 768px) {
   section.tweets-container .user-info {
-    gap: 10px; /* Further adjust gap for smaller screens */
-    font-size: 12px;
+    gap: 10px; 
   }
 }

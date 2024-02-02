@@ -28,14 +28,14 @@ body > header h2 {
   text-align: center;
 }
 
-/* Tablet Styles (768px to 1024px) */
+/* tablet (768px to 1024px) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   body > header {
     height: 400px; /* Adjust header height for tablets */
   }
 }
 
-/* Desktop Styles (1024px and above) */
+/* desktop (1024px and above) */
 @media only screen and (min-width: 1024px) {
   body > header {
     height: 520px;

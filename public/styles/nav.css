@@ -1,4 +1,4 @@
-
+/* nav styling, upper bar */
 
 
 nav {
@@ -36,14 +36,14 @@ div.container {
   padding: 0 1.5em;
 }
 
-/* Media Query for Responsive Design */
+/* responsive design for a smaller screen */
 @media only screen and (max-width: 768px) {
   nav span {
-    font-size: 20px; /* Adjust font size for smaller screens */
+    font-size: 20px; 
     line-height: 80px;
   }
 
   div.container {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 16px; 
   }
 }

@@ -1,8 +1,4 @@
-/* styles.css */
-
-
-
-
+/* new tweet styling, submit a new tweet block */
 .new-tweet {
  
   background-color: #ecebd4;
@@ -32,7 +28,7 @@ textarea {
 
  .line {
   border-top: 1px solid #0a0a0a;
-  margin: 16px 0; /* Adjust the margin as needed */
+  margin: 16px 0; 
 }
 
 .button-counter-container {
@@ -67,8 +63,6 @@ textarea {
 }
 
 
-
-
 #error-container {
   display: none;
   background-color: #ffe6e6;
@@ -81,22 +75,15 @@ textarea {
   align-items: center;
 }
 
-/* Responsive styles for screens smaller than 768px */
+/*responsive styles for smaller than 767px */
 @media only screen and (max-width: 767px) {
   .button-counter-container button {
-    padding: 8px 16px; /* Adjust padding for smaller screens */
+    padding: 8px 16px; 
   }
 
   .button-counter-container button i {
-    margin-left: 4px; /* Adjust margin for smaller screens */
+    margin-left: 4px; 
   }
 
-  .new-tweet {
- 
-    background-color: #ecebd4;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 20px;
-    width: 100%
-  }
+  
 }
