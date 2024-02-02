@@ -32,9 +32,9 @@ $(document).ready(function() {
         loadTweets();
         $('#new-tweet-button textarea').val("");
         
-  const formFind = $('#new-tweet-button');
-  const countTarget = formFind.find("output");
-  countTarget.text("140");
+        const formFind = $('#new-tweet-button');
+        const countTarget = formFind.find("output");
+        countTarget.text("140");
       },
       error: function(error) {
         console.error("Error:", error);

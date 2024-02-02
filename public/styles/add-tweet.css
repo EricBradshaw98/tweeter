@@ -3,6 +3,9 @@
   transition: all 0.3s ease;
   margin: 10px;
   margin-right: 120px;
+word-break: break-word;
+width: 100%
+
   }
 
   .tweet:hover {
@@ -86,5 +89,6 @@
   section.tweets-container .user-info {
     gap: 10px; 
     font-size: 12px;
+
   }
 }
