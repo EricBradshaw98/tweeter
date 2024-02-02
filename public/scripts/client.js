@@ -25,7 +25,7 @@ $(document).ready(function() {
     const formData = $(this).serialize();
   
     $.ajax({
-      url: "http://localhost:8080/tweets",
+      url: "/tweets",
       method: "POST",
       data: formData,
       success: function(response) {
@@ -61,7 +61,7 @@ $(document).ready(function() {
   function loadTweets() {
     
     $.ajax({
-      url: "http://localhost:8080/tweets",
+      url: "/tweets",
       method: "GET",
       dataType: "json",
       success: function(tweets) {
@@ -88,13 +88,13 @@ $(document).ready(function() {
 
 function createTweetElement(tweet) {
  
-  // const $tweet = $("<article>").addClass("tweet");
+  
   const $tweet = $(`
   <article class="tweet"> 
   <header class="user-info">
   <img src="${tweet.user.avatars}" class="avatar" alt="User Avatar">
-  <h2>${escapeHtml(tweet.user.name)}</h2>
-  <p>${escapeHtml(tweet.user.handle)}</p>
+  <h2>${(tweet.user.name)}</h2>
+  <p>${(tweet.user.handle)}</p>
 </header>
 <div class="line"></div>
       <div class="tweet-content">
@@ -104,9 +104,9 @@ function createTweetElement(tweet) {
 <footer>
   <span class="timestamp"> ${timeago.format(tweet.created_at)}</span>
   <div class="icons">
-    <i class="fas fa-flag"></i>
+  <i class="fa-regular fa-flag"></i>
     <i class="fas fa-retweet"></i>
-    <i class="fas fa-heart"></i>
+    <i class="fa-regular fa-heart"></i>
   </div>
 </footer>
 <div class="line" style="background-color: black; height: 3px; margin: 10px 0;"></div></article>`).addClass("tweet");

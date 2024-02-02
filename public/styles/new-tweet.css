@@ -5,7 +5,8 @@
   border: 1px solid #000000;
   border-radius: 5px;
   padding: 20px;
-  width: 100%
+  width: 100%;
+  margin-top: 200px;
 }
 
 
@@ -77,6 +78,12 @@ textarea {
 
 /*responsive styles for smaller than 767px */
 @media only screen and (max-width: 767px) {
+
+  .new-tweet {
+ 
+    
+    margin-top: 20px;
+  }
   .button-counter-container button {
     padding: 8px 16px; 
   }

@@ -2,13 +2,13 @@
 
 body > header {
   background-color: #94bae6; 
-  height: 520px;
+  height: 100%;
   width: 100%;
   background-image: url("/images/argyle.png");
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
   align-items: center;
   margin-top: 120px;
   padding: 20px;
@@ -29,16 +29,17 @@ body > header h2 {
 }
 
 /* tablet (768px to 1024px) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body > header {
-    height: 400px; /* Adjust header height for tablets */
-  }
-}
+
 
 /* desktop (1024px and above) */
 @media only screen and (min-width: 1024px) {
   body > header {
     height: 520px;
-    margin-top: 120px;
+    
+    height: 100%;
+  width: 500px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 220px;
   }
 }

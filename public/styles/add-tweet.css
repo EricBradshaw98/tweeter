@@ -2,7 +2,7 @@
   
   transition: all 0.3s ease;
   margin: 10px;
-    
+  margin-right: 120px;
   }
 
   .tweet:hover {
@@ -75,9 +75,9 @@
   }
   
   section.tweets-container footer .icons i:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
+    color: #ff0000; 
     
-    transform: rotate(360deg) scale(2);
+    transform: scale(1.1);
 
   }
   
