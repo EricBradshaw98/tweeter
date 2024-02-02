@@ -73,7 +73,9 @@ $(document).ready(function() {
       }
     });
   }
-  
+  const formFind = $(this).closest("form");
+  const countTarget = formFind.find("output");
+  countTarget.text("140");
 
   loadTweets();
 
