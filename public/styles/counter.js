@@ -8,7 +8,7 @@ $(document).ready(function () {
     event.preventDefault();
     console.log("Form is being submitted.");
     
-    $('.counter').text(140).css('color', '');
+    $('.new-tweet counter').text(140).css('color', '');
 
   });
 

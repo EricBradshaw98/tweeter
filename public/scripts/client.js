@@ -31,6 +31,10 @@ $(document).ready(function() {
       success: function(response) {
         loadTweets();
         $('#new-tweet-button textarea').val("");
+        
+  const formFind = $('#new-tweet-button');
+  const countTarget = formFind.find("output");
+  countTarget.text("140");
       },
       error: function(error) {
         console.error("Error:", error);
@@ -73,9 +77,7 @@ $(document).ready(function() {
       }
     });
   }
-  const formFind = $(this).closest("form");
-  const countTarget = formFind.find("output");
-  countTarget.text("140");
+  
 
   loadTweets();
 
@@ -135,6 +137,7 @@ function renderTweets(tweets) {
     // takes return value and appends it to the tweets container
     $tweetsContainer.prepend($tweetElement);
   }
+  
 }
 //=====================================================================
 
