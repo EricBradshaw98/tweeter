@@ -22,7 +22,6 @@
   
  
   
-  
   section.tweets-container .user-info {
     display: flex;
     flex-direction: row;
@@ -50,7 +49,7 @@
     
   }
   
- 
+  
   section.tweets-container .line {
     border-top: 1px solid #ccc;
     margin: 16px 0; 
@@ -61,7 +60,7 @@
     margin: 16px 0;
   }
   
- 
+  
   section.tweets-container footer {
     display: flex;
     justify-content: space-between;
@@ -86,5 +85,6 @@
 @media only screen and (max-width: 768px) {
   section.tweets-container .user-info {
     gap: 10px; 
+    font-size: 12px;
   }
 }

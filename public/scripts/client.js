@@ -121,7 +121,9 @@ function renderTweets(tweets) {
   
   const $tweetsContainer = $("#tweets-container");
   $tweetsContainer.empty();
-  
+
+ 
+
   // loops through tweets
   for (const tweet of tweets) {
     console.log(tweet);
