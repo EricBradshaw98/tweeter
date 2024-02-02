@@ -18,7 +18,7 @@ THis is a complete page built using HTML, Javascript and CSS for styling. It fun
 -   "jquery": "^3.7.1",
 -   "md5": "^2.1.0"
 
-  [Screenshot of tweet box] (https://github.com/EricBradshaw98/tweeter/blob/master/docs/tweet-box.png?raw=true)
+  [Screenshot of tweet box](https://github.com/EricBradshaw98/tweeter/blob/master/docs/tweet-box.png?raw=true)
 [Screenshot of hover over tweet box](https://github.com/EricBradshaw98/tweeter/blob/master/docs/hover-over.png?raw=true)
 [Screenshot of narrow tweet box](https://github.com/EricBradshaw98/tweeter/blob/master/docs/narrow-tweet.png)
 [Screenshot of tweet added to box](https://github.com/EricBradshaw98/tweeter/blob/master/docs/tweet-added.png?raw=true)
